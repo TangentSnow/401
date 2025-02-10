@@ -7,7 +7,7 @@ using namespace std;
 
 class Inventory {
 private:
-    vector<Product> products;  // A vector to store Product objects
+    vector<Product> products;
 
 public:
     Inventory();

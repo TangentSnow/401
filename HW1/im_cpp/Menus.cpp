@@ -42,7 +42,7 @@ void Menus::customer_menu() {
                 cout << "How many: ";
                 int quantity;
                 cin >> quantity;
-                cin.ignore();  // Clear the newline character from the input buffer
+                cin.ignore();
                 product->purchase(quantity);
             } else {
                 cout << name << " not found." << endl;
@@ -95,11 +95,11 @@ void Menus::manager_menu() {
             cout << "Enter price: ";
             double price;
             cin >> price;
-            cin.ignore();  // Clear the newline character from the input buffer
+            cin.ignore();
             cout << "Enter quantity: ";
             int quantity;
             cin >> quantity;
-            cin.ignore();  // Clear the newline character from the input buffer
+            cin.ignore();
 
             map<string, string> qualities;
             while (true) {
@@ -124,7 +124,7 @@ void Menus::manager_menu() {
             cout << "Enter the change in quantity (+/-): ";
             int add_quantity;
             cin >> add_quantity;
-            cin.ignore();  // Clear the newline character from the input buffer
+            cin.ignore();
             inventory.update_stock(name, add_quantity);
         } else if (choice == "6") {
             cout << "Good-Bye..." << endl;

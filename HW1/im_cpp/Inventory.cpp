@@ -1,5 +1,5 @@
 #include "Inventory.h"
-#include <algorithm>  // For transform
+#include <algorithm>
 #include <iostream>
 
 Inventory::Inventory() {}
@@ -8,7 +8,6 @@ void Inventory::add_product(const Product& product) {
     products.push_back(product);
 }
 
-// Search for a product by name
 Product* Inventory::search_product(const string& name) {
     vector<Product*> results;
 
@@ -31,7 +30,7 @@ Product* Inventory::search_product(const string& name) {
             cout << product->display_info() << endl;
             cout << string(40, '-') << endl;
         }
-        return results[0];  // Return the first match
+        return results[0];
     } else {
         cout << "No products found." << endl;
         return nullptr;
